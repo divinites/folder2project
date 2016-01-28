@@ -6,14 +6,18 @@ Sublime Text has a bunch of useful API, However, given an opened file, there is 
 
 - Open the folder that contains the openned file as a project. If there is a sublime-project file in this folder, load it (This may change the interpreter, syntax theme, etc.)
 - provide an API for futher developement:
-  '''
-  window.run_command("open_folder_as_project", {"folder": folder})
-  '''
+
+  *window.run_command("open_folder_as_project", {"folder": folder})*
+
 
 It is a bit tricky to implement this API. First, Sublime only has three project-related API:
+
     - sublime.window.project_file_name()
+
     - sublime.window.project_data()
+
     - sublime.window.set_project_data()
+
 Admittedly, if you have already opened a project file, the methods API are enough to retrive the project settings, but no method can directly open a sublime-project file, nor open a folder as a project.
 
 Therefore, I designed a workaround: 
