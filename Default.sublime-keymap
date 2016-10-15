@@ -1,4 +1,4 @@
-[ 
-   { "keys": ["ctrl+h", "ctrl+o"], "command": "open_current_folder_as_project"},
-   { "keys": ["ctrl+h", "ctrl+c"], "command": "remove_folder_from_project"}
+[
+   { "keys": ["ctrl+shift+h"], "command": "open_current_folder_as_project"},
+   { "keys": ["ctrl+shift+l"], "command": "remove_folder_from_project"}
 ]

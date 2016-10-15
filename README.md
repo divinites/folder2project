@@ -20,7 +20,7 @@ It is a bit tricky to implement this API. First, Sublime only has three project-
 
 Admittedly, if you have already opened a project file, the methods API are enough to retrive the project settings, but no method can directly open a sublime-project file, nor open a folder as a project.
 
-Therefore, I designed a workaround: 
+Therefore, I designed a workaround:
 1. Search the folder for *.sublime-project file
 2. If exist, load this file. Otherwise create a temporary project configuration.
 3. put folder's path in project settings, temporarily change all relative paths to absolute paths to correctly show relevant folders in side bar.
@@ -29,5 +29,12 @@ Therefore, I designed a workaround:
 
 ## Usage
 - "open_current_folder_as_project": Add the folder that contains current file to the sidebar.
+
 - "remove_folder_from_project": Remove the folder that contains current file from sidebar.
+
+- You can define your own keymaps, the default keymap is:
+[
+   { "keys": ["ctrl+shift+h"], "command": "open_current_folder_as_project"},
+   { "keys": ["ctrl+shift+l"], "command": "remove_folder_from_project"}
+]
 
