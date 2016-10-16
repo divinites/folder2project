@@ -33,8 +33,9 @@ Therefore, I designed a workaround:
 - "remove_folder_from_project": Remove the folder that contains current file from sidebar.
 
 - You can define your own keymaps, the default keymap is:
+```json
 [
    { "keys": ["ctrl+shift+h"], "command": "open_current_folder_as_project"},
    { "keys": ["ctrl+shift+l"], "command": "remove_folder_from_project"}
 ]
-
+```
